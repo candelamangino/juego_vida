@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Diagnostics;
+using System.Text;
+using System.Threading;
 
 namespace Ucu.Poo.GameOfLife
 {
@@ -6,12 +9,7 @@ namespace Ucu.Poo.GameOfLife
     {
         static void Main(string[] args)
         {
-            Archivo archivo = new Archivo();
-            Estructura estructura = new Estructura();
-            Display display = new Display();
-
-            bool[,] board = archivo.leerArchivo("board.txt");
-            display.ImprimirTablero(board);
+            Console.WriteLine("Hello World!");
         }
     }
 }

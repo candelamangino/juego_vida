@@ -1,9 +1,11 @@
 using System.IO;
+using System.Text;
+
 namespace Ucu.Poo.GameOfLife;
 
 public class Archivo
 {
-    public bool[,] leerArchivo(string url)
+    public bool[,] LeerArchivo(string url)
     {
         string content = File.ReadAllText(url);
         string[] contentLines = content.Split('\n');
