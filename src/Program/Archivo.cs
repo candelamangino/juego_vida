@@ -3,9 +3,9 @@ using System.Text;
 
 namespace Ucu.Poo.GameOfLife;
 
-public class Archivo
+public class Archivo // Esta clase es la experta en leer y convertir el texto en un tablero. 
 {
-    public bool[,] LeerArchivo(string url)
+    public bool[,] LeerArchivo(string url) // LeerArchivo lee el archivo y lo convierte en una matriz booleana.
     {
         string content = File.ReadAllText(url);
         string[] contentLines = content.Split('\n');

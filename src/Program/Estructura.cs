@@ -1,14 +1,14 @@
 namespace Ucu.Poo.GameOfLife;
 
-public class Estructura
+public class Estructura // Esta clase es la experta en la lógica del juego y responsable de procesar las reglas del juego.
 {
-    public bool[,] procesarGeneracion(bool[,] gameBoard)
+    public bool[,] procesarGeneracion(bool[,] gameBoard) // procesarGeneracion calcula el siguiente estado del tablero según las reglas del juego.
     {
         int boardWidth = gameBoard.GetLength(0);
         int boardHeight = gameBoard.GetLength(1);
 
         bool[,] cloneboard = new bool[boardWidth, boardHeight];
-        for (int x = 0; x < boardHeight; x++)
+        for (int x = 0; x < boardWidth; x++)
         {
             for (int y = 0; y < boardHeight; y++)
             {

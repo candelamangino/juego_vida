@@ -4,9 +4,9 @@ using System.Threading;
 
 namespace Ucu.Poo.GameOfLife;
 
-public class Display
-{
-    public void ImprimirTablero(bool[,] board)
+public class Display // Esta clase es la experta en la visualización del tablero y mostrarlo en la consola.
+{ 
+    public void ImprimirTablero(bool[,] board) // ImprimirTablero es responsable de mostrar el tablero en la consola, maneja la visualización, no la lógica del juego.
     {
         int width = board.GetLength(0); //variabe que representa el ancho del tablero
         int height = board.GetLength(1); //variabe que representa altura del tablero
@@ -31,10 +31,10 @@ public class Display
                 s.Append("\n");
             }
             Console.WriteLine(s.ToString());
-            //=================================================
-            //Invocar método para calcular siguiente generación
-            //=================================================
+            // Pausa antes de calcular y mostrar la siguiente generación.
             Thread.Sleep(300);
+            // Calcular la siguiente generación del tablero.
+            // Delegar la responsabilidad a la clase Estructura que es experta en la lógica del juego.
             board = new Estructura().procesarGeneracion(board);
         } 
     }
