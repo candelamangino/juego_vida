@@ -6,7 +6,12 @@ namespace Ucu.Poo.GameOfLife
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Archivo archivo = new Archivo();
+            Estructura estructura = new Estructura();
+            Display display = new Display();
+
+            bool[,] board = archivo.leerArchivo("board.txt");
+            display.ImprimirTablero(board);
         }
     }
 }
