@@ -9,7 +9,15 @@ namespace Ucu.Poo.GameOfLife
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Archivo archivo = new Archivo();
+            bool[,] program = archivo.LeerArchivo("board.txt");
+            Estructura estructura = new Estructura();
+            Display display = new Display();
+            while (true)
+            {
+                program = estructura.procesarGeneracion(program);
+                display.ImprimirTablero(program);
+            }
         }
     }
 }
